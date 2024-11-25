@@ -13,6 +13,9 @@ export const loginUser = async (username: string, password: string) => {
   if (!user || !bcrypt.compareSync(password, user.password)) {
     throw new Error('Invalid credentials');
   }
+  if (!process.env.JWT_SECRET) {
+    throw new Error('JWT_SECRET is not defined');
+  }
   const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET);
   return { user, token };
 };

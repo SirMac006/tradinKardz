@@ -16,16 +16,16 @@
     "forceConsistentCasingInFileNames": true,  // Ensure consistent file name casing across the project
     "baseUrl": ".",                            // Base directory for resolving non-relative module names
     "paths": {
-      "@components/*": ["src/components/*"],   // Alias for components
-      "@utils/*": ["src/utils/*"]              // Alias for utilities
+      "@components/*": ["client/src/components/*"],   // Alias for components
+      "@utils/*": ["client/src/utils/*"]              // Alias for utilities
     },
-    "outDir": "./dist",                        // Output directory for compiled JavaScript files
-    "rootDir": "./src"                         // Root directory of TypeScript files
+    "outDir": "./client/dist",                        // Output directory for compiled JavaScript files
+    "rootDir": "./client/src"                         // Root directory of TypeScript files
   },
   "include": [
-    "src/**/*", "src/env.d.ts"                                 // Include all files in the 'src' folder
+    "client/src/**/*", "client/src/vite.env.d.ts"                                 // Include all files in the 'src' folder
   ],
   "exclude": [
-    "dist"
+    "client/dist"
   ]
 }
