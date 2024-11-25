@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ES6",                          // Target ES6 for broader browser support
+    "lib": ["dom", "es6"],                     // Include DOM and ES6 libraries for the browser environment
+    "allowJs": true,                           // Allow JavaScript files to be compiled
+    "skipLibCheck": true,                      // Skip type checking of declaration files (speeds up compilation)
+    "esModuleInterop": true,                   // Ensure compatibility with CommonJS modules
+    "jsx": "react-jsx",                        // Enable React 17+ JSX Transform (use react-jsx for React 17+)
+    "module": "esnext",                        // Use modern module system (ESNext)
+    "moduleResolution": "node",                // Use Node.js-style module resolution
+    "resolveJsonModule": true,                 // Allow importing JSON files as modules
+    "strict": true,                            // Enable strict type checking options
+    "noImplicitAny": true,                     // Disallow implicit 'any' type
+    "noUnusedLocals": true,                    // Disallow unused local variables
+    "noUnusedParameters": true,                // Disallow unused parameters
+    "forceConsistentCasingInFileNames": true,  // Ensure consistent file name casing across the project
+    "baseUrl": ".",                            // Base directory for resolving non-relative module names
+    "paths": {
+      "@components/*": ["src/components/*"],   // Alias for components
+      "@utils/*": ["src/utils/*"]              // Alias for utilities
+    },
+    "outDir": "./dist",                        // Output directory for compiled JavaScript files
+    "rootDir": "./src"                         // Root directory of TypeScript files
+  },
+  "include": [
+    "src/**/*", "src/env.d.ts"                                 // Include all files in the 'src' folder
+  ],
+  "exclude": [
+    "dist"
+  ]
+}
