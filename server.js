@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const cors_1 = __importDefault(require("cors"));
-const routes_1 = require("../routes");
+const routes_1 = require("./routes");
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 // Middleware
